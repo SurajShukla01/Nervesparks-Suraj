@@ -36,7 +36,7 @@
                                 <Badge slot="text" class="ms-3 dark:bg-primary-600">4</Badge>
                               </Rating>
                               <div class="flex justify-between items-center">
-                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>
+                                <span class="text-3xl font-bold text-gray-900 dark:text-white">₹600000</span>
                                 <Button href="/">Buy now</Button>
                               </div>
                           
