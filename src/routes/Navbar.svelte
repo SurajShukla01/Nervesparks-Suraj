@@ -1,10 +1,8 @@
 <script>
-	// import AppsMenu from '$lib/widgets/AppsMenu.svelte';
 	import UserMenu from '$lib/widgets/UserMenu.svelte';
 	import { DarkMode, NavBrand, NavHamburger, Navbar, Search } from 'flowbite-svelte';
 	import { SunSolid, MoonSolid } from 'flowbite-svelte-icons';
 	import Users from '../data/users.json';
-  // let btnClass = 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg text-xl p-2';
 
 	export let fluid = true;
 	export let drawerHidden = false;
