@@ -27,13 +27,16 @@
         }
         });
 
+        responseStore.set(responseData);
+
+
 </script>
 
 
       
-<div class="space-y-4">
+<div class="grid grid-cols-2 gap-6">
         {#each cars as car}
-        <Card href="/" horizontal size="lg" class="flex sm:max-w-full gap-8">
+        <Card href="/" horizontal size="lg" class="relative flex sm:max-w-full gap-8">
                 <div class="img-container">
                         <img src={car.car_info.model_img_url} class ="h-full max-h-24" alt={car.name}>
                 </div>
@@ -45,7 +48,7 @@
                               </Rating>
                               <div class="flex justify-between items-center">
                                 <span class="text-3xl font-bold text-gray-900 dark:text-white">₹600000</span>
-                                <Button href="/">Buy now</Button>
+                                <Button href="/" class="absolute right-[10%]">Buy now</Button>
                               </div>
                           
                 </div>
