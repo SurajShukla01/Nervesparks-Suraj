@@ -2,7 +2,7 @@
 	import UserMenu from '$lib/widgets/UserMenu.svelte';
 	import { DarkMode, NavBrand, NavHamburger, Navbar, Search } from 'flowbite-svelte';
 	import { SunSolid, MoonSolid } from 'flowbite-svelte-icons';
-	import Users from '../data/users.json';
+	import Users from './data/users.json';
 
 	export let fluid = true;
 	export let drawerHidden = false;
@@ -14,7 +14,7 @@
 		class="m-0 me-3 md:block lg:hidden"
 	/>
 	<NavBrand href="/" class="py-1.5 lg:w-60">
-		<img src="/images/logo.png" class="me-3 h-6 sm:h-16" alt="Flowbite Logo" />
+		<img src="/images/logo.png" class="me-3 h-6 sm:h-16" alt="Drive Way Logo" />
 		<span class="self-center whitespace-nowrap text-xl font-semibold text-primary-500 dark:text-primary-500 sm:text-2xl"
 			>DriveWay</span
 		>

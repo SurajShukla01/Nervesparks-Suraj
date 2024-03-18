@@ -1,8 +1,6 @@
 <script>
   import Sidebar from "./Sidebar.svelte";
   import Cars from "./cars.svelte";
-
-
 </script>
 
 
