@@ -16,11 +16,6 @@
 
 </script>
 
-<!-- <img src= alt={car.name} class="w-full h-40 object-cover mb-2 rounded-md" />
-<h3 class="text-lg font-semibold mb-1">{car.name}</h3>
-<p class="text-sm mb-1">{car.type}</p>
-<p class="text-sm mb-1">{car.car_info.color}</p>
-<p class="text-sm mb-1">Mileage: {car.car_info.mileage} miles</p> -->
 
       
 <div class="space-y-4">
@@ -43,5 +38,4 @@
                 </div>
         </Card>
         {/each}
-
 </div>
