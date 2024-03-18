@@ -1,6 +1,8 @@
 <script lang="ts">
   import { writable } from 'svelte/store';
   import { Card, Button, Rating, Badge } from 'flowbite-svelte';
+  import { Breadcrumb, BreadcrumbItem, Heading } from 'flowbite-svelte';
+
 
 // Initialize a writable store to hold the car data
 let finalData = writable(null);
@@ -26,7 +28,19 @@ let c = data.cars.then(data => {
 </script>
 
 
+<div class="flex align-left w-full max-w-[1350px] col-span-full xl:mb-0">
+  <div class="container">
+
+    <Breadcrumb class="mt-4">
+      <BreadcrumbItem href="/" home>Home</BreadcrumbItem>
+      <BreadcrumbItem>Dealer</BreadcrumbItem>
+      <BreadcrumbItem>{finalData.dealership_name}</BreadcrumbItem>
+    </Breadcrumb>
+    
+  </div>
+</div>
 <div class="flex gap-10 mt-10 max-w-full w-[1350px] px-6 dark:text-white text-3xl">
+
               
               <Card class="text-center w-full" size="sm" padding="xl">
                 <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">{finalData.dealership_name}</h5>

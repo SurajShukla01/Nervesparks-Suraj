@@ -29,7 +29,7 @@ export const load = ({ fetch, params }) => {
       const cars = await response.json();
       // .find((d) => d._id === id);
       // dealerData.set(dealer);
-      console.log(cars);
+      // console.log(cars);
       return cars;
     } catch (error) {
       console.error("Error fetching data:", error);

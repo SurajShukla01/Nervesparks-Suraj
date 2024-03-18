@@ -4,7 +4,7 @@
 </script>
 
 
-<div class="flex gap-10 mt-10 max-w-full w-[1350px] px-6 dark:text-white text-3xl">
+<div class="flex gap-10 mt-8 max-w-full w-[1350px] px-6 dark:text-white text-3xl">
         <div class="sidebar outline-1">
                 <Sidebar />
         </div>
