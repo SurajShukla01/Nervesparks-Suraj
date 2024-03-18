@@ -2,12 +2,25 @@
         import { Card, Button, Rating, Badge } from 'flowbite-svelte';
         import axios from 'axios';
         import { onMount } from 'svelte';
+        import { responseStore } from './data/responseStore';
+
+        var responseData;
+
+        responseStore.subscribe(value => {
+        responseData = value;
+        });
+
 
         let cars = [];
-
+        console.log("got here",responseData);
         onMount(async () => {
         try {
-        const response = await axios.get('https://nervesparks.onrender.com/api/car/getAll');
+        const response = await axios.get('https://nervesparks.onrender.com/api/car/getAll',{
+                headers: {
+                'Content-Type': 'application/json',
+                'authorization': 'Bearer '+responseData.data.tocken
+                }
+        });
         cars = response.data.cars;
         } catch (error) {
         console.error('Error fetching data:', error);

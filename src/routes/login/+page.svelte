@@ -3,7 +3,7 @@
    import { goto } from '$app/navigation';
   //  import { login } from '$lib/auth.ts';
   import axios from "axios";
-
+  import { responseStore } from '../data/responseStore';
 
         let email = '';
         let password = '';
@@ -30,6 +30,7 @@
             // Handle successful registration (e.g., redirect to login page)
             console.log('Registration successful');
             console.log(response);
+            responseStore.set(response);
             goto("/")
           } else {
             // Handle registration error (e.g., display error message)

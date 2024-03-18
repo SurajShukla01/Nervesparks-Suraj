@@ -9,13 +9,27 @@
         // import type { PageServerLoad } from './$types';
 
         // import { useParams } from '$app/navigation';
+        import { responseStore } from './data/responseStore';
+
+        var responseData;
+
+        responseStore.subscribe(value => {
+        responseData = value;
+        });
+
+
 
 
         let dealers = [];
 
         onMount(async () => {
           try {
-            const response = await axios.get('https://nervesparks.onrender.com/api/dealer/getAll');
+            const response = await axios.get('https://nervesparks.onrender.com/api/dealer/getAll',{
+                headers: {
+                'Content-Type': 'application/json',
+                'authorization': 'Bearer '+responseData.data.tocken
+                }
+        });
             dealers = response.data.dealer;
           } catch (error) {
             console.error('Error fetching data:', error);
